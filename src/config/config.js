@@ -1,11 +1,13 @@
+require('dotenv').config();
+
 const config = {
     port: process.env.PORT || 8080,
     api: {
-        url: 'https://pal-ai-backend-87197497418.asia-southeast1.run.app',
-        key: 'H7R9cnx7lND2lGObQE4xtP59d4sLZ8ffmXawa0UWPCQER8DDiKsaOKVA4EcbWkmzGuea8lnF1u63UgMg'
+        url: process.env.API_URL,
+        key: process.env.API_KEY
     },
     weather: {
-        apiKey: 'a764b1a399cf6aa08880d483fd94ee74',
+        apiKey: process.env.WEATHER_API_KEY,
         location: {
             lat: 10.3157,
             lon: 123.8854,
